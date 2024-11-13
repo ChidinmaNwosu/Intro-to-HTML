@@ -1,0 +1,57 @@
+body{
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#nav-header {
+    background-color: plum;
+    padding: 20px;
+    text-align: center;
+    border-bottom: solid white;
+}
+#nav-header h1 {
+    color: white;
+  
+}
+
+#nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+   
+}
+
+#nav li {
+     list-style: none;
+}
+
+#nav ul li a {
+    color: white;
+    text-decoration: none;
+    
+    
+}
+
+main{ 
+    padding: 20px;
+}
+
+#header> h2, #about > h2, 
+#services > h2,
+ #related  {
+    color:plum;
+}
+
+footer  {
+    background-color: plum;
+    
+    text-align: center;
+    border-top: solid white;
+}
+
+footer #contact{
+    color: white;
+}
