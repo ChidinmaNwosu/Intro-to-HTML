@@ -1,21 +1,20 @@
 body{
+    box-sizing: border-box;
     min-height: 100vh;
     padding: 0;
     margin: 0;
-    font-family: 'Courier New', Courier, monospace;
-    
+    font-family:'Times New Roman', Times, serif;
 }
 
 #nav-header {
-    background-color: rgb(255, 141, 255);
-    padding: 20px;
+    background-color: gray;
+    padding: 10px;
     text-align: center;
     border-bottom: solid white;
 }
 #nav-header h1 {
-    color: white;
+    color: blanchedalmond;
     font-size: 30px;
-  
 }
 
 #nav ul {
@@ -23,7 +22,6 @@ body{
     flex-direction: row;
     justify-content: center;
     gap: 20px;
-   
 }
 
 #nav li {
@@ -31,29 +29,39 @@ body{
 }
 
 #nav ul li a {
-    color: white;
+    color: blanchedalmond;
     text-decoration: none;
-    
-    
+}
+
+#nav ul li a:hover{
+    color:white;
 }
 
 main{ 
     padding: 20px;
 }
 
+.para1:hover{
+    line-height:2;
+    text-align:center;
+}
+
 #header> h2, #about > h2, 
 #services > h2,
  #related  {
-    color:plum;
+    color:gray;
+}
+
+.related li a:hover{
+     color: black;
 }
 
 footer  {
-    background-color: plum;
-    
+    background-color:gray;
     text-align: center;
     border-top: solid white;
 }
 
 footer #contact{
-    color: white;
+    color: blanchedalmond;
 }
