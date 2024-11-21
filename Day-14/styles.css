@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+    font-family: "Courier New", Courier, monospace;
+  }
+  
+  body {
+    height: 100vh;
+    
+  }
+  
+  header {
+    display: flex;
+    border-bottom: 2px solid black;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: rgb(2, 49, 2);
+    color: white;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+   }
+  
+  nav ul {
+    display: flex;
+    gap: 10px;
+  }
+  
+  nav ul li {
+    list-style-type: none;
+    
+  }
+  
+  nav ul li a {
+    border: 2px solid white;
+    padding: 4px;
+    text-decoration: none;
+    color: white;
+  }
+
+  :hover nav ul li a {
+    background-color: white;
+      color:  rgb(2, 49, 2);
+      border:2px solid  rgb(2, 49, 2);;
+  }
+     
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    position: relative;
+    
+  }
+  
+  .hero {
+    margin-top: 50px;
+    padding-block: 50px;
+  }
+  
+  .hero-header {
+    text-align: center;
+  }
+  
+  .tags {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .tags li {
+    border: 2px solid black;
+    padding-inline: 6px;
+    padding-block: 5px;
+    border-radius: 30px;
+  }
+   
+  :hover .tags li {
+      color: white;
+      background-color: rgb(2, 49, 2);
+      cursor: pointer;
+  }
+  
+  .img-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    gap: 10px;
+  }
+  
+  img {
+    width: 150px;
+    height: 150px;
+    border: 2px solid black;
+    padding: 10px;
+  }
+  
+  footer {
+    border-top: 2px solid black;
+    background-color: rgb(2, 49, 2);
+    padding: 20px;
+  }
+  
+  footer p {
+    text-align: center;
+    color: white;
+  }
+  
+  @media screen and (max-width: 768px){
+      header{
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          padding: 20px;
+      }
+      main{
+          padding: 10px;
+      }
+      .tags{
+          font-size: 12px;
+          font-weight: 500;
+          padding: 3px;
+      }
+  
+     .img-gallery{
+          grid-template-columns: repeat(2, 1fr);
+      }
+     
+  }
+  
+  @media screen and (max-width: 425px) {
+   header{
+    padding-inline: 10px;
+
+   }
+     .tags{
+          font-size: 8px;
+          font-weight: 500;
+          padding: 3px;
+      }
+      .img-gallery{
+          grid-template-columns: repeat(1, 1fr);
+      }
+  }
