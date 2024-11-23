@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    width: 300px;
+    max-width: 800px;
+    height: 300px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 5px solid gray;
+    background-color: white;
+}
+
+.container h2{
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+#sum-form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+#sum-form label{
+    font-size: 1.2rem;
+    font-weight:600;
+}
+
+#sum-form input{
+    width: 100%;
+    padding: 5px;
+    font-size: 1.2rem;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.sum-control{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.btn{
+    width: fit-content;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: dodgerblue;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
