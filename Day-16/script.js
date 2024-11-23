@@ -20,9 +20,9 @@ form.addEventListener('submit', function(event){
     //call the calculateSum function
     const result = calculateSum(num1, num2);
 
-    //display result in an alert or on the page
+    //display result in an alert or 
     alert("The sum is: " + result);
 
-    //display the result
+    //display the result on the page
     resultDiv.textContent = `The sum of ${num1} and ${num2} is: ${result}`;
 })
