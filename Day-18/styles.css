@@ -22,6 +22,12 @@
     position: fixed;
     z-index: 1000;
    }
+
+   
+body.dark-mode header {
+  background-color: #1e1e1e;
+  border-bottom: 2px solid #444;
+}
   
   nav ul {
     display: flex;
@@ -73,21 +79,16 @@
     gap: 10px;
     margin-top: 20px;
   }
-  
-  .tags li {
+
+.tags li {
     border: 2px solid black;
     padding-inline: 6px;
     padding-block: 5px;
     border-radius: 30px;
   }
    
-  :hover .tags li {
-      color: white;
-      background-color: rgb(2, 49, 2);
-      cursor: pointer;
-  }
   
-  .img-gallery {
+.img-gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     place-items: center;

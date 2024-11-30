@@ -1,43 +1,223 @@
+/* Global Reset */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f4f4f4;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-#btn {
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.5s;
-}
-
-.button-light {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body Styles */
+  body {
+    font-family: "Courier New", Courier, monospace;
+    height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  body.light-mode {
     background-color: whitesmoke;
-    color: rgb(2, 2, 43);;
-    border: 1px solid black;
+    color: rgb(2, 49, 2);
   }
-
-.button-dark {
-    background-color: rgb(2, 2, 43);;
+  
+  body.dark-mode {
+    background-color: rgb(2, 49, 2);
+    color: whitesmoke;
+  }
+  
+  /* Header Styles */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 2px solid black;
+    background-color: rgb(2, 49, 2);
     color: white;
-    border: 1px solid whitesmoke;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  body.dark-mode header {
+    background-color:rgb(2, 49, 2);
+    border-bottom: 2px solid whitesmoke;
   }
 
-.light-mode {
-  background-color: whitesmoke;
-  color: rgb(2, 2, 43);
-}
+  body.light-mode header {
+    background-color: whitesmoke;
+    color: rgb(2, 49, 2);
+  }
+  
+  nav ul {
+    display: flex;
+    gap: 10px;
+  }
+  
+  nav ul li {
+    list-style-type: none;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    padding: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  body.dark-mode nav ul li a {
+    background-color: rgb(2, 49, 2);
+    color: whitesmoke;
+  }
 
-.dark-mode {
-  background-color:rgb(2, 2, 43);
-  color: whitesmoke;
-}
+    body.light-mode nav ul li a {
+        background-color: whitesmoke;
+        color: rgb(2, 49, 2);
+        border: 2px solid rgb(2, 49, 2);
+    }
+  
+  nav ul li a:hover {
+    background-color: white;
+    color: rgb(2, 49, 2);
+    border-color: rgb(2, 49, 2);
+  }
+  
+  /* Main Content */
+  main {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    position: relative;
+  }
+  
+  .hero-header {
+    margin-bottom: 20px;
+  }
+  
+  .tags {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    
+  }
+  
+  .tags li {
+    border: 2px solid black;
+    padding-inline: 4px;
+    padding-block: 6px;
+    border-radius: 20px;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  body.dark-mode .tags li {
+    background-color: whitesmoke;
+    color: rgb(2, 49, 2);
+  }
+  
+  .img-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    justify-items: center;
+    margin-top: 30px;
+  }
+  
+  img {
+    width: 150px;
+    height: 150px;
+    border: 2px solid black;
+    padding: 10px;
+  }
+
+  .dark-mode img {
+    background-color: whitesmoke;
+  }
+  
+  /* Button Styles */
+  #btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .button-light {
+    background-color: whitesmoke;
+    color: rgb(2, 49, 2);
+    border-color: #1e1e1e;
+  }
+  
+  .button-dark {
+    background-color: rgb(2, 49, 2);
+    color: whitesmoke;
+    border-color: whitesmoke;
+  }
+  
+  /* Footer */
+  footer {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: rgb(2, 49, 2);
+    color: white;
+    border-top: 2px solid black;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    
+  }
+
+  footer p{
+    text-align: center;
+  }
+  
+  body.dark-mode footer {
+    background-color: rgb(2, 49, 2);
+    color: whitesmoke;
+    border-top: 2px solid whitesmoke;
+  }
+
+  body.light-mode footer{
+    background-color: whitesmoke;
+    color: rgb(2, 49, 2);
+  }
+  
+  /* Responsive Styles */
+  @media screen and (max-width: 768px) {
+    header {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .tags {
+      font-size: 12px;
+      font-weight: 500;
+      padding: 3px;
+    }
+  
+    .img-gallery {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media screen and (max-width: 425px) {
+    header {
+      padding-inline: 10px;
+    }
+  
+    .tags {
+      font-size: 10px;
+      font-weight: 500;
+      padding: 3px;
+    }
+  
+    .img-gallery {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  
