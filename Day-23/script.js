@@ -1,27 +1,13 @@
-// const toggleDarkMode = document.getElementById('btn').addEventListener('click', function(event){
-//     event.preventDefault();
-  
-//     if(toggleDarkMode.classList.contains('.light-mode')){
-//         toggleDarkMode.classList.remove('.light-mode');
-//         toggleDarkMode.classList.add('.dark-mode');
-//     } else{
-//         toggleDarkMode.classList.remove('.dark-mode');
-//         toggleDarkMode.classList.add('.light-mode');
-//     }
-
-// });
-
-// toggleDarkMode.classList.add('light-mode');
-
-// Add an event listener to toggle between dark and light modes
+//1. Add an event listener to toggle between dark and light modes
 const toggleButton = document.getElementById('btn');
 const body = document.body;
 
-// Event listener for the button
-toggleButton.addEventListener('click', function(event){
+// 2. Event listener for the button
+toggleButton.addEventListener('click',function(event){
+    alert('Toggle button clicked');
     event.preventDefault();
 
-    // Check if the body has the 'light-mode' class
+//3. Check if the body has the 'light-mode' class
     if (body.classList.contains('light-mode')) {
         body.classList.remove('light-mode');
         body.classList.add('dark-mode');
